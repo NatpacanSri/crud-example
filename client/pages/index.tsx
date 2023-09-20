@@ -50,7 +50,7 @@ function Table({ datas }: Props) {
         {datas?.length > 0 ? (
           datas.map((student, index) => {
             return (
-              <tr >
+              <tr key={student.stdID+"_"+index}>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">{student.stdID}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">{student.name}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">{student.gender}</td>

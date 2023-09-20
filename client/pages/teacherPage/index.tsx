@@ -55,7 +55,7 @@ function Table({ datas }: Props) {
     return (
         <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
             <thead className="bg-gray-50 dark:bg-gray-700">
-                <tr>
+                <tr >
                     <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase dark:text-gray-400">tchID</th>
                     <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase dark:text-gray-400">Name</th>
                     <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase dark:text-gray-400">Gender</th>
@@ -67,7 +67,7 @@ function Table({ datas }: Props) {
                 {datas?.length > 0 ? (
                     datas.map((teacher, index) => {
                         return (
-                            <tr >
+                            <tr key={teacher.tchID+"_"+index}>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">{teacher.tchID}</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">{teacher.name}</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">{teacher.gender}</td>
