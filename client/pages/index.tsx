@@ -71,9 +71,9 @@ function Table({ datas }: Props) {
 }
 
 export default function Home(props: Props) {
-
+  // console.log(props)
   const [students, setStudents] = useState<[Data]>(props.datas)
-
+  console.log(students)
   return (
     <div className='bg-gray-800 h-screen'>
       <Navbar />
